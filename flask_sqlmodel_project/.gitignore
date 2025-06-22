@@ -1,0 +1,95 @@
+<<<<<<< HEAD
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+eggs/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyCharm
+.idea/
+
+# VSCode
+.vscode/
+
+# Virtual environment
+venv/
+env/
+.flaskenv
+*.env
+*.env.*
+
+# Docker
+*.log
+*.pid
+*.sqlite3
+*.db
+*.bak
+*.tar
+*.tar.gz
+*.tar.bz2
+
+# Local Docker volumes
+postgres_data/
+
+# Pytest
+.cache/
+.coverage
+htmlcov/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# MyPy
+.mypy_cache/
+
+# Pytest cache
+.pytest_cache/
+
+# System
+.DS_Store
+Thumbs.db
+=======
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+.venv
+venv/
+.env/
+db.sqlite
+*.db
+*.sqlite
+.vscode/
+.idea/
+instance/
+*.sqlite3
+*.log
+*.pid
+node_modules/
+dist/
+build/
+uploads/
+*.tar
+*.zip
+*.egg-info/
+docker-compose.override.yml
+
+
+>>>>>>> 4660c4ecedfa9aeada716089af7021279595ffa8

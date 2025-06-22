@@ -1,0 +1,11 @@
+<<<<<<< HEAD
+Flask==3.1.1
+Flask-SQLAlchemy==3.1.1
+SQLAlchemy==2.0.41
+psycopg2-binary==2.9.9
+=======
+flask
+psycopg2-binary
+flask-SQLAlchemy
+
+>>>>>>> 4660c4ecedfa9aeada716089af7021279595ffa8
