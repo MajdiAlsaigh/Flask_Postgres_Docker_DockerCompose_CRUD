@@ -1,0 +1,74 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+build/
+develop-eggs/
+dist/
+eggs/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+.venv/
+.flaskenv
+*.env
+*.env.*
+.env
+
+
+# Editor directories and files
+.idea/
+.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+db.sqlite
+*.bak
+
+# Docker related
+*.log
+*.pid
+*.tar
+*.tar.gz
+*.tar.bz2
+docker-compose.override.yml
+
+# Local Docker volumes
+postgres_data/
+
+# Testing / Coverage
+.cache/
+.pytest_cache/
+.coverage
+htmlcov/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# MyPy
+.mypy_cache/
+
+# Uploads / Media
+uploads/
+
+# Instance folder (Flask)
+instance/
