@@ -1,0 +1,73 @@
+/* frontend/input.css */
+@import "../styles/tokens.css";
+@import "../styles/animations.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    /* Base styles for the application */
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+}
+
+@layer components {
+    /* Reusable component classes */
+    .background-container {
+        @apply absolute inset-0 w-screen h-screen overflow-hidden -z-[999];
+    }
+
+    .background-image {
+        @apply w-full h-full object-cover;
+    }
+
+
+    .stars-layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2000px;
+        z-index: -950;
+        animation: move-up 500s linear infinite;
+    }
+
+
+    .planet-container {
+        @apply fixed top-[10vw] left-1/2 -translate-x-1/2 pointer-events-none -z-[900];
+    }
+
+    .planet {
+        @apply w-[1800px] aspect-square rounded-full bg-transparent animate-rotate-magic;
+    }
+
+    .shooting-stars-container {
+        @apply relative;
+    }
+}
+
+@layer utilities {
+    /* Shooting stars animation */
+    .shooting-star {
+        @apply absolute w-[4px] h-[4px] rounded-full;
+        background: var(--color-light);
+        box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1);
+        animation: shooting-star var(--speed, 5s) linear infinite;
+    }
+
+    .tail {
+        @apply absolute top-1/2 w-[300px] h-[1px] bg-gradient-to-r
+        from-white to-transparent -translate-y-1/2;
+    }
+
+    @keyframes shooting-star {
+        0% {
+            transform: rotate(315deg) translateX(0);
+        }
+        100% {
+            transform: rotate(315deg) translateX(var(--distance, -1000px));
+        }
+    }
+}

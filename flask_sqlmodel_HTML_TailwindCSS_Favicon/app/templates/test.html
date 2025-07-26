@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Education Center</title>
+    <link href="{{ url_for('static', filename='css/output.css') }}" rel="stylesheet"/>
+    <!-- Favicon Setup -->
+    <link rel="icon" href="{{ url_for('static', filename='assets/icons/favicon.ico') }}" sizes="any">
+    <link rel="icon" href="{{ url_for('static', filename='assets/icons/favicon-32x32.png') }}" type="image/png">
+    <link rel="icon" href="{{ url_for('static', filename='assets/icons/favicon-16x16.png') }}" type="image/png">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='assets/icons/apple-touch-icon-180x180.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='assets/icons/site.webmanifest') }}">
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#FFFFFF">
+</head>
+<body class="overflow-hidden">
+
+<!-- Background image -->
+<div class="background-container">
+    <picture>
+        <source srcset="{{ url_for('static', filename='images/bg-first.webp') }}" type="image/webp"/>
+        <img
+            src="{{ url_for('static', filename='images/bg-first.jpg') }}"
+            alt="First-Background"
+            class="background-image"
+        />
+    </picture>
+</div>
+
+<!-- Static Stars Generated -->
+<object data="{{ url_for('static', filename='stars/stars.svg') }}"
+        type="image/svg+xml"
+        class="stars-layer">
+</object>
+
+<!-- Round Planet -->
+<div class="planet-container">
+    <div class="planet"></div>
+</div>
+
+<!-- Shooting Stars -->
+<div class="shooting-stars-container">
+    <span class="shooting-star opacity-30"
+          style="--speed: 7s; --distance: -1500px; top: 0px; right: 700px;">
+        <span class="tail"></span>
+    </span>
+
+    <span class="shooting-star opacity-40"
+          style="--speed: 15s; --distance: -6000px; top: 0px; right: 80px;">
+        <span class="tail"></span>
+    </span>
+
+    <span class="shooting-star opacity-60"
+          style="--speed: 10s; --distance: -10000px; top: 200px; right: 200px;">
+        <span class="tail"></span>
+    </span>
+</div>
+
+<div class=" w-full h-screen text-white flex items-center justify-center">
+    <div class="text-center space-y-4">
+        <h1 class="text-4xl md:text-6xl font-bold">
+            TR
+            <span class="text-8xl md:text-12xl font-bold inline-block -mx-6 translate-y-7">^</span> KE
+        </h1>
+        <p class="text-lg md:text-xl">Sites beyond imagination, one prompt away.</p>
+    </div>
+</div>
+
+
+</body>
+</html>
