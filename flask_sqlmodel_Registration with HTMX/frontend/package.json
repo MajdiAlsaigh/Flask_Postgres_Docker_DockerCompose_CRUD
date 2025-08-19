@@ -1,0 +1,31 @@
+{
+    "name": "frontend",
+    "version": "1.0.0",
+    "private": true,
+    "main": "index.js",
+    "scripts": {
+        "build:css": "npx postcss ./tailwind/input.css -o ../app/static/css/output.css --minify",
+        "dev:css": "npx postcss ./tailwind/input.css -o ../app/static/css/output.css --watch --verbose",
+        "dev": "concurrently \"npm run dev:css\" \"npm run dev:js\" --names \"CSS,JS\" --colors \"yellow.bold,cyan.bold\" --prefix \"[{name}]\"",
+        "build:js": "npx esbuild ./js/app.js --bundle --minify --outfile=../app/static/js/app.js",
+        "dev:js": "npx esbuild ./js/app.js --bundle --outfile=../app/static/js/app.js --sourcemap  --watch",
+        "build": "npm run build:css && npm run build:js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "autoprefixer": "^10.4.21",
+        "concurrently": "^9.2.0",
+        "daisyui": "^4.12.24",
+        "esbuild": "^0.25.8",
+        "postcss": "^8.5.6",
+        "postcss-cli": "^11.0.1",
+        "postcss-import": "^16.1.1",
+        "tailwindcss": "^3.4.17"
+    },
+    "dependencies": {
+        "htmx.org": "^2.0.6"
+    }
+}

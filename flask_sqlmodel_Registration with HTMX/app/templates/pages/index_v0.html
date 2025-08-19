@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test - Education Center</title>
+
+    <!-- Tailwind CSS -->
+    <link href="{{ url_for('static', filename='css/output.css') }}" rel="stylesheet"/>
+
+    <!-- Favicon Setup -->
+    <link rel="icon" href="{{ url_for('static', filename='assets/icons/favicon.ico') }}" sizes="any">
+    <link rel="icon" href="{{ url_for('static', filename='assets/icons/favicon-32x32.png') }}" type="image/png">
+    <link rel="icon" href="{{ url_for('static', filename='assets/icons/favicon-16x16.png') }}" type="image/png">
+    <link rel="apple-touch-icon" href="{{ url_for('static', filename='assets/icons/apple-touch-icon-180x180.png') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='assets/icons/site.webmanifest') }}">
+
+</head>
+
+<body class="overflow-hidden">
+
+<!-- Navigation Bar -->
+<header class="fixed w-full bg-transparent backdrop-blur-sm z-99">
+    <nav
+        class="flex flex-row items-stretch justify-between w-full max-w-[1440px] mx-auto h-[88px] px-[20px] lg:px-[40px] text-white">
+        <!-- Left Logo -->
+        <div class="flex flex-row items-center justify-start w-[248px]">
+            <div class="logo flex items-center pl-[5px]">
+                <a href="#" class="flex items-center space-x-3">
+                    <!-- Logo Icon -->
+                    <div
+                        class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <!-- Logo Text -->
+                    <span class="font-semibold text-xl tracking-tight">
+                        EduCenter
+                    </span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Middle Navigation Items -->
+        <div class="hidden md:flex flex-row items-center justify-center flex-1 gap-8 mx-auto">
+            <ul class="menu menu-horizontal px-1 text-lg font-semibold">
+                <li class="group relative">
+                    <a href="#" tabindex="0"
+                       class="hover:bg-white/10 hover:translate-y-[-1px] focus:bg-white/10 focus:translate-y-[-1px] focus:outline-none">
+                        Programs</a>
+                    <ul class="absolute top-full left-0 bg-base-100 shadow-lg rounded-lg p-2 min-w-[200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200 z-50">
+                        <li><a href="#"
+                               class="block px-4 py-2 hover:bg-white/10 hover:translate-y-[-1px] focus:bg-white/10 focus:translate-y-[-1px] focus:outline-none">
+                            Program-1</a>
+                        </li>
+                        <li><a href="#"
+                               class="block px-4 py-2 hover:bg-white/10 hover:translate-y-[-1px] focus:bg-white/10 focus:translate-y-[-1px] focus:outline-none">
+                            Program-2</a>
+                        </li>
+                        <li><a href="#"
+                               class="block px-4 py-2 hover:bg-white/10 hover:translate-y-[-1px] focus:bg-white/10 focus:translate-y-[-1px] focus:outline-none">
+                            Program-3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="group relative">
+                    <a href="#" tabindex="0"
+                       class="hover:bg-white/10 hover:translate-y-[-1px] focus:bg-white/10 focus:translate-y-[-1px] focus:outline-none">
+                        Tests & Exams</a>
+                    <ul class="absolute top-full left-0 bg-base-100 shadow-lg rounded-lg p-2 min-w-[200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 group-focus-within:visible transition-all duration-200 z-50">
+                        <li><a href="#"
+                               class="block px-4 py-2 hover:bg-white/10 hover:translate-y-[-1px] focus:bg-white/10 focus:translate-y-[-1px] focus:outline-none">
+                            Tests 1/2</a>
+                        </li>
+                        <li><a href="#"
+                               class="block px-4 py-2 hover:bg-white/10 hover:translate-y-[-1px] focus:bg-white/10 focus:translate-y-[-1px] focus:outline-none">
+                            Exam 1/2</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#"
+                       class="hover:bg-white/10 hover:translate-y-[-1px] focus:bg-white/10 focus:translate-y-[-1px] focus:outline-none">
+                    Applications</a>
+                </li>
+                <li><a href="#"
+                       class="hover:bg-white/10 hover:translate-y-[-1px] focus:bg-white/10 focus:translate-y-[-1px] focus:outline-none">
+                    Progress</a>
+                </li>
+                <li><a href="#"
+                       class="hover:bg-white/10 hover:translate-y-[-1px] focus:bg-white/10 focus:translate-y-[-1px] focus:outline-none">
+                    Documents</a>
+                </li>
+                <li><a href="#"
+                       class="hover:bg-white/10 hover:translate-y-[-1px] focus:bg-white/10 focus:translate-y-[-1px] focus:outline-none">
+                    Advising</a>
+                </li>
+            </ul>
+        </div>
+
+
+        <!-- Right Side - Button and Avatar -->
+        <div class="flex flex-row items-center justify-end space-x-4">
+            <!-- Start Now Button -->
+            <button
+                class="magic-button flex items-center justify-center px-6 py-2.5 font-medium text-sm relative z-10">
+                <span class="mr-2">Start Now</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11" fill="none">
+                    <path
+                        d="M10.8102 4.80003H1.5C1.31435 4.80003 1.1363 4.87378 1.00503 5.00506C0.87375 5.13633 0.8 5.31438 0.8 5.50003C0.8 5.68569 0.87375 5.86373 1.00503 5.99501C1.1363 6.12628 1.31435 6.20003 1.5 6.20003H10.8102L7.50484 9.50485L7.50483 9.50486C7.3735 9.63619 7.29972 9.81431 7.29972 10C7.29972 10.1858 7.3735 10.3639 7.50483 10.4952C7.63616 10.6265 7.81427 10.7003 8 10.7003C8.18573 10.7003 8.36384 10.6265 8.49517 10.4952L12.9951 5.99528L12.9952 5.99521L12.8538 5.85378L10.8102 4.80003ZM10.8102 4.80003L7.50484 1.49522L7.50483 1.49521C7.3735 1.36388 7.29972 1.18576 7.29972 1.00003C7.29972 0.814309 7.3735 0.63619 7.50483 0.504862C7.63616 0.373535 7.81427 0.299756 8 0.299756C8.18573 0.299756 8.36384 0.373535 8.49517 0.504863L12.9951 5.00478L12.9952 5.00486L10.8102 4.80003Z"
+                        fill="white" stroke="white" stroke-width="0.4"/>
+                </svg>
+            </button>
+
+            <!-- Notification Button -->
+            <button
+                class="p-2 rounded-full hover:bg-gray-200 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                <div class="relative">
+                    <!-- Notification icon (white) -->
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5 text-white hover:text-gray-200 transition-colors duration-200"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                        />
+                    </svg>
+
+                    <!-- Notification indicator (red dot) -->
+                    <span class="absolute top-0 right-0 h-2 w-2 rounded-full bg-red-500"></span>
+                </div>
+            </button>
+
+            <!-- Avatar -->
+            <div class="relative">
+                <!-- Online status indicator (green dot) -->
+                <span
+                    class="absolute -bottom-0.5 -right-0.5 z-10 h-4 w-4 rounded-full border-2 border-white bg-green-500"></span>
+
+                <!-- Avatar image container -->
+                <div class="avatar w-11 h-11 overflow-hidden rounded-full">
+                    <img
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+                        alt="User Avatar"
+                        class="h-full w-full object-cover rounded-full relative"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden flex items-center">
+            <button class="text-white p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+</header>
+
+
+<div>
+    <!-- Background image -->
+    <div class="background-container">
+        <picture>
+            <source srcset="{{ url_for('static', filename='images/bg-first-v1.webp') }}" type="image/webp"/>
+            <img
+                src="{{ url_for('static', filename='images/bg-first-v1.jpg') }}"
+                alt="First-Background"
+                class="background-image"
+            />
+        </picture>
+    </div>
+
+    <!-- Static Stars Generated -->
+    <div class="stars-layer"
+         style="background: url('{{ url_for('static', filename='stars/stars.svg') }}') repeat;"></div>
+
+    <!-- Round Planet -->
+    <div class="planet-container">
+        <div class="planet"></div>
+    </div>
+
+    <!-- Shooting Stars -->
+    <div class="shooting-stars-container">
+        <span class="shooting-star opacity-30"
+              style="--speed: 7s; --distance: -1500px; top: 0px; right: 700px;">
+            <span class="tail"></span>
+        </span>
+
+        <span class="shooting-star opacity-40"
+              style="--speed: 15s; --distance: -6000px; top: 0px; right: 80px;">
+            <span class="tail"></span>
+        </span>
+
+        <span class="shooting-star opacity-60"
+              style="--speed: 10s; --distance: -10000px; top: 200px; right: 200px;">
+            <span class="tail"></span>
+        </span>
+    </div>
+</div>
+
+
+<div class=" w-full h-screen text-white flex items-center justify-center">
+    <div class="text-center space-y-4">
+        <h1 class="text-4xl md:text-6xl font-bold">
+            TR
+            <span class="text-8xl md:text-12xl font-bold inline-block -mx-6 translate-y-7">^</span> KE
+        </h1>
+        <p class="text-lg md:text-xl">Sites beyond imagination, one prompt away.</p>
+        <button class="btn btn-outline btn-secondary">Secondary</button>
+        <button class="btn btn-outline btn-info">Info</button>
+        <button class="btn btn-outline btn-warning">Warning</button>
+    </div>
+</div>
+
+
+
+</body>
+</html>
+

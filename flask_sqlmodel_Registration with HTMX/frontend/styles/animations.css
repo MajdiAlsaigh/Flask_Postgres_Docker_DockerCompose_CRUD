@@ -1,0 +1,29 @@
+/* frontend/styles/animations.css */
+
+@keyframes move-up {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-2000px);
+    }
+}
+
+@keyframes rotate-magic {
+    0% {
+        transform: rotate(90deg);
+        box-shadow: var(--glow-effect-1);
+    }
+    50% {
+        transform: rotate(270deg);
+        box-shadow: var(--glow-effect-2);
+    }
+    100% {
+        transform: rotate(450deg);
+        box-shadow: var(--glow-effect-1);
+    }
+}
+
+.animate-rotate-magic {
+    animation: rotate-magic 15s linear infinite;
+}

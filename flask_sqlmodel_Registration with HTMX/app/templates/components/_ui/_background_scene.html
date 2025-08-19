@@ -1,0 +1,39 @@
+<!-- Background image -->
+<div class="background-container">
+    <picture>
+        <source srcset="{{ url_for('static', filename='images/bg-first-v1.webp') }}" type="image/webp"/>
+        <img
+            src="{{ url_for('static', filename='images/bg-first-v1.jpg') }}"
+            alt="First-Background"
+            class="background-image"
+        />
+    </picture>
+</div>
+
+<!-- Static Stars Generated -->
+<div class="stars-layer"
+     style="background: url('{{ url_for('static', filename='stars/stars.svg') }}') repeat;"></div>
+
+<!-- Round Planet -->
+<div class="planet-container">
+    <div class="planet"></div>
+</div>
+
+<!-- Shooting Stars -->
+<div class="shooting-stars-container">
+        <span class="shooting-star opacity-30"
+              style="--speed: 7s; --distance: -1500px; top: 0px; right: 700px;">
+            <span class="tail"></span>
+        </span>
+
+    <span class="shooting-star opacity-40"
+          style="--speed: 15s; --distance: -6000px; top: 0px; right: 80px;">
+            <span class="tail"></span>
+        </span>
+
+    <span class="shooting-star opacity-60"
+          style="--speed: 10s; --distance: -10000px; top: 200px; right: 200px;">
+            <span class="tail"></span>
+        </span>
+</div>
+
